@@ -1,0 +1,68 @@
+.board {
+  margin-top: 50px;
+  height: ;
+}
+
+.sneakerList{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shoeBox {
+  margin: 10px 1%;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  width: 112%;
+  /* height: 300px; */
+}
+
+.middle{
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.shoeBox img {
+  width: 135px;
+  height: 125px;
+  margin-bottom: 10px;
+}
+
+.shoeBox span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.fa-thumbs-up {
+  color: green;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.fa-thumbs-down {
+  color: red;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.fa-trash {
+  color: gray;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+
+
+

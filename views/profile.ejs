@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <title>21 Savage Fan Site</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4f3c245195.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <body>
+    <div class="container">
+    
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+    
+        <div class="row">
+    
+            <!-- LOCAL INFORMATION -->
+            <div class="col-sm-6 hide" style="display:none">
+                <div class="well">
+                    <h3><span class="fa fa-user"></span> Local</h3>
+    
+                    <% if (user.local.email) { %>
+                        <p>
+                            <strong>id</strong>: <%= user._id %><br>
+                            <strong>email</strong>: <%= user.local.email %><br>
+                            <strong>password</strong>: <%= user.local.password %>
+                        </p>
+    
+                        <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                    <% } else { %>
+                        <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                    <% } %>
+    
+                </div>
+            </div>
+            
+            <div class="board">
+              <h3>Sneaker Watchlist</h3>
+              <div class="row">
+                <% for(var i=0; i<sneakers.length; i++) { %>
+                  <div class="col-sm-2">
+                    <div class="shoeBox">
+                      <span class="name"> <%= sneakers[i].shoeName %></span>
+                      <span class="money"><%= sneakers[i].price %></span>
+                      <img src="<%= sneakers[i].src %>" class="img-fluid"> 
+                      <span> <button class="bookmark" type="button"><i class="fa-regular fa-bookmark fa-beat-fade" style="color: #000000;"></i></i></button></span>
+                      
+                    </div>
+                  </div>
+                <% } %>
+              </div>
+              
+            </div>
+            <h2>Watchlist</h2>
+                    <div class="bottom">
+                      <ol class="wishList">
+                        <% if (wishShoes && wishShoes.length) { %>
+                          <% for(var i=0; i<wishShoes.length; i++) { %>
+                            <% let color = wishShoes[i].purchased === true ? 'green' : 'red' %>
+                            <li class="shoeList">
+                              <span><%= wishShoes[i].shoeName %></span>
+                              <span><%= wishShoes[i].price %></span>
+                              <span><i id="<%= wishShoes[i]._id %>" class="fa fa-trash" aria-hidden="true"></i></span>
+                              <span><button class="purchased <%= color %>" type="button">purchased</button></span> 
+                              
+                            </li>
+                          <% } %>
+                        <% } else { %>
+                          <li>No shoes in your wishlist yet</li>
+                        <% } %>
+                      </ol>
+                    </div>
+
+
+            
+            <script src="main.js"></script>
+            
+            </body>
+            
+
+    
+
+</html>
