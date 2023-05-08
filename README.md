@@ -11,3 +11,7 @@
 ## Credit
 
 Modified from Scotch.io's auth tutorial
+
+Sneaker Watchlist 
+Add sneakers to your own personal watchlist!
+Let us know if you purchased the shoe as well.
