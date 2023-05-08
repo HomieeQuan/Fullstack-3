@@ -18,8 +18,8 @@ module.exports = function(app, passport, db) {
         {shoeName: 'Space Jams', price: '$550', src: 'img/spaceJam.jpg'},
         {shoeName: 'Travis Scotts', price: '$2400', src: 'img/travisScott.jpg'},
         {shoeName: 'Off White Sail', price: '$1300', src: 'img/offWhiteSail.jpeg'},
-        {shoeName: 'Off White UNC', price: '$1800', src: 'img/offWhiteUnc.jpg.tiff'},
-        {shoeName: 'Nike low dunk Kentucky', price: '$200', src: 'img/Kentucky.tiff'},
+        {shoeName: 'Off White UNC', price: '$1800', src: 'img/offWhite.jpg'},
+        {shoeName: 'Nike low dunk Kentucky', price: '$200', src: 'img/nikeLow.jpeg'},
         {shoeName: 'Black AirForces', price: 'Might rob you instead', src: 'img/blackAirForce.jpeg'}
       ];
     
